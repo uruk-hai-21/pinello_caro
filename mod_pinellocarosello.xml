@@ -17,10 +17,10 @@
         <filename>index.html</filename>
     </files>
     <languages folder="language">
-        <language tag="en-GB">language/en-GB/mod_pinellocarosello.ini</language>
-        <language tag="en-GB">language/en-GB/mod_pinellocarosello.sys.ini</language>
-        <language tag="it-IT">language/it-IT/mod_pinellocarosello.ini</language>
-        <language tag="it-IT">language/it-IT/mod_pinellocarosello.sys.ini</language>
+        <language tag="en-GB">en-GB/mod_pinellocarosello.ini</language>
+        <language tag="en-GB">en-GB/mod_pinellocarosello.sys.ini</language>
+        <language tag="it-IT">it-IT/mod_pinellocarosello.ini</language>
+        <language tag="it-IT">it-IT/mod_pinellocarosello.sys.ini</language>
     </languages>
     <help key="JHELP_EXTENSIONS_MODULE_MANAGER_OUTSMARTITOWL" />
     <config>
