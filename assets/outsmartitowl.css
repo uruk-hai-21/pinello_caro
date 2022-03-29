@@ -1,0 +1,119 @@
+/* 
+    CSS file to adjust caption position
+
+    Created on : Aug 24, 2015, 1:27:07 PM
+    Author     : outsmartit.be
+*/
+.owl-item{
+    position: relative;
+}
+.carousel-caption-small{
+    position: absolute;
+    background-color: rgba(128,128,128,0.7);
+    width: 100%;
+    color: ivory;
+    bottom: 0px;
+    left: 0px;
+    padding-left: 10px;
+    text-align:center;
+}
+.carousel-caption-small h5{
+    color : yellow;
+    margin-bottom: 0px;
+}
+
+.carousel-wrapper-big{
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    right:0;
+    left: 0px;
+    font: 0/0 a;
+}
+.carousel-wrapper-big:before {
+    content: ' ';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;    
+}
+.carousel-caption-big{
+ /*   background-color: rgba(128,128,128,0.7);*/
+    font: 20px/1 Arial, sans-serif;
+    display: inline-block;
+    width: 100%;
+    color: ivory;
+    vertical-align: middle;
+    padding-left: 10%;
+
+}
+.carousel-caption-big h5{
+    font-size: 5rem;
+    color : yellow;
+    margin-bottom: 0px;
+}
+
+
+
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-prev:before,
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-nav .owl-next:after,
+.owl-carousel .owl-dot {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+}
+.owl-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    margin-top: 0px !important;
+    transform: translate(0, -50%);
+    width: 100%;
+    visibility: hidden;
+}
+
+.owl-carousel .owl-nav .owl-prev {float: left; visibility: visible;}
+.owl-carousel .owl-nav .owl-next {float: right; visibility: visible;}
+
+.owl-carousel .owl-nav .owl-prev:before,
+.owl-carousel .owl-nav .owl-next:after {
+    color: #ffffff;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    font-size: 26px;
+}
+.owl-theme.owl-carousel .owl-nav [class*="owl-"]:hover {
+    background: transparent;
+}
+
+.owl-carousel .owl-nav .owl-prev:before {
+    content: "\f053";
+    margin-left:10px;
+}
+.owl-carousel .owl-nav .owl-next:after{
+    content: "\f054";
+    margin-right:10px;
+}
+.owl-dots {
+    position: absolute;
+    top: 100%;
+    margin-top: 0px !important;
+    transform: translate(0, -100%);
+    width: 100%;
+}
+div[class^="carousel-wrapper-"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: unset;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    background: transparent;
+    text-align: center;
+}
+
+div[class^="carousel-wrapper-"] h5 {
+    color: #ffffff;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
