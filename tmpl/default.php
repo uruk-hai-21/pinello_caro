@@ -1,7 +1,7 @@
 <?php
 /**
  * @package     Joomla.Site
- * @subpackage  mod_outsmartitowl
+ * @subpackage  mod_pinellocarosello
  *
  * @copyright   Copyright (C) 2005 - 2022 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
@@ -11,11 +11,11 @@ if ($jq == 1) {
     JHtml::_('jquery.framework');
 }
 if ($fancybox == 1) {
-    $document->addScript(JURI::base() . 'modules/mod_outsmartitowl/assets/fancybox.umd.js');
-    $document->addStyleSheet(JURI::base() . 'modules/mod_outsmartitowl/assets/fancybox.css');
+    $document->addScript(JURI::base() . 'modules/mod_pinellocarosello/assets/fancybox.umd.js');
+    $document->addStyleSheet(JURI::base() . 'modules/mod_pinellocarosello/assets/fancybox.css');
 }
 
-$document->addScript(JURI::base() . 'modules/mod_outsmartitowl/assets/owl.carousel.min.js');
+$document->addScript(JURI::base() . 'modules/mod_pinellocarosello/assets/owl.carousel.min.js');
 
 
 if ($gumberCarousel == 'O') {
