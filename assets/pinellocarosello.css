@@ -1,24 +1,22 @@
 /* 
     CSS file to adjust caption position
 
-    Created on : Aug 24, 2015, 1:27:07 PM
-    Author     : outsmartit.be
+    Created on : Mar 29, 2022, 1:27:07 PM
+    Author     : publygoo.it
 */
 .owl-item{
     position: relative;
 }
 .carousel-caption-small{
     position: absolute;
-    background-color: rgba(128,128,128,0.7);
+    background-color: rgba(0,0,0,0.3);
     width: 100%;
-    color: ivory;
     bottom: 0px;
     left: 0px;
     padding-left: 10px;
     text-align:center;
 }
-.carousel-caption-small h5{
-    color : yellow;
+.carousel-caption-small h5 {
     margin-bottom: 0px;
 }
 
@@ -37,11 +35,9 @@
     vertical-align: middle;    
 }
 .carousel-caption-big{
- /*   background-color: rgba(128,128,128,0.7);*/
     font: 20px/1 Arial, sans-serif;
     display: inline-block;
     width: 100%;
-    color: ivory;
     vertical-align: middle;
     padding-left: 10%;
 
