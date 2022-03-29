@@ -78,8 +78,6 @@ if ($gumberCarousel == 'O') {
             Toolbar: {
                 display: [
                   { id: "counter", position: "left" },
-                  //"zoom",
-                  //"fullscreen",
                   "close"
                 ],
               },
@@ -115,10 +113,10 @@ if ($gumberCarousel == 'O') {
                             if($gumberCarousel == 'F'){
                                 echo '<a href="'.$gumber_img[$number].'" data-fancybox="gallery_'. $owl_id .'" '.
                                 (!is_null($caption)?' data-caption="'.$gumber_img[$titlenr].'">':'>')
-                                .'<img src="'.$gumber_img[$number].' " alt="'.$gumber_img[$titlenr].'"></a>';
+                                .'<img src="'.$gumber_img[$number].'" alt="'.$gumber_img[$titlenr].'"></a>';
                                     
                             } else {
-                                echo '<img src="'.$gumber_img[$number].' " alt="'.$gumber_img[$titlenr].'">'.
+                                echo '<img src="'.$gumber_img[$number].'" alt="'.$gumber_img[$titlenr].'">'.
                                 (!is_null($newlink)?'<a href="'.$newlink.'">':'').
                                     '<div class="'.$wrapperclass.'">
                                         <div class="'.$captionclass.'">
