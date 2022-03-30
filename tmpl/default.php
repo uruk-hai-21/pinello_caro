@@ -61,6 +61,7 @@ if ($gumberCarousel == 'O') {
             jQuery("#' . $owl_id . '").owlCarousel({
                 autoplay: '. $autoplay .',
                 loop: '. $loop .',
+                lazyLoad: '. $lazyload .',
                 //loop: false,
                 //rewind: true,
                 mouseDrag: false,

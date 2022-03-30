@@ -266,6 +266,15 @@
                 label="MOD_PINELLOCAROSELLO_FIELD_SPEED_LABEL"
                 description="MOD_PINELLOCAROSELLO_FIELD_SPEED_DESC"
                        default="3000" first="1000" last="10000" step="1000"/>
+                <field name="lazyLoad"
+                type = "radio"
+                class="btn-group"
+                label="MOD_PINELLOCAROSELLO_FIELD_LAZYLOAD_LABEL"
+                description="MOD_PINELLOCAROSELLO_FIELD_LAZYLOAD_DESC"
+                       default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>     
+                </field>
                 <field name="pagination"
                 type = "radio"
                 class="btn-group"

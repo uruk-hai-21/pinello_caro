@@ -23,7 +23,9 @@ $gumberspeed = $params->get('CarSpeed');
 $gumberitems = $params->get('nrOfItems');
 $paginationbool = 'false';
 $navigationbool = 'false';
+$laziloadbool = 'false';
 $pagination = $params->get('pagination',1);
+$lazyload = $params->get('lazyLoad',0);
 $navigation = $params->get('navigation',0);
 $loop = $params->get('loop',0);
 $autoplay = $params->get('autoplay',0);
@@ -35,6 +37,9 @@ if ($pagination){
 }
 if ($navigation){
     $navigationbool = 'true';
+}
+if ($lazyload){
+    $laziloadbool = 'true';
 }
     
 $jq = $params->get('add_jquery');
