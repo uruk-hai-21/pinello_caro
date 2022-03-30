@@ -275,6 +275,11 @@
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>     
                 </field>
+                <field name="lazyLoadEager"
+                type = "integer"
+                label="MOD_PINELLOCAROSELLO_FIELD_LAZYLOADEAGER_LABEL"
+                description="MOD_PINELLOCAROSELLO_FIELD_LAZYLOADEAGER_DESC"
+                       default="0" first="0" last="10" step="1"/>
                 <field name="pagination"
                 type = "radio"
                 class="btn-group"

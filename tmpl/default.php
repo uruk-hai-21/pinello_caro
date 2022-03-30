@@ -62,6 +62,7 @@ if ($gumberCarousel == 'O') {
                 autoplay: '. $autoplay .',
                 loop: '. $loop .',
                 lazyLoad: '. $lazyload .',
+                lazyLoadEager: '. $lazyloadeager.',
                 //loop: false,
                 //rewind: true,
                 mouseDrag: false,

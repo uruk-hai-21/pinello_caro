@@ -26,6 +26,7 @@ $navigationbool = 'false';
 $laziloadbool = 'false';
 $pagination = $params->get('pagination',1);
 $lazyload = $params->get('lazyLoad',0);
+$lazyloadeager = $params->get('lazyLoadEager');
 $navigation = $params->get('navigation',0);
 $loop = $params->get('loop',0);
 $autoplay = $params->get('autoplay',0);
