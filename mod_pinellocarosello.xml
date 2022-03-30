@@ -7,7 +7,7 @@
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>info@publygoo.it</authorEmail>
     <authorUrl>www.publygoo.it</authorUrl>
-    <version>1.0.6</version>
+    <version>1.0.8</version>
     <description>MOD_PINELLOCAROSELLO_XML_DESCRIPTION</description>
     <files>
         <filename module="mod_pinellocarosello">mod_pinellocarosello.php</filename>
@@ -25,6 +25,16 @@
     <help key="JHELP_EXTENSIONS_MODULE_MANAGER_OUTSMARTITOWL" />
     <config>
         <fields name="params">
+
+            <!-- <fieldset name="testing" addfieldprefix="Joomla\Component\Content\Administrator\Field">
+                <field name="field-name" type="subform" label="SUBFORM" multiple="true">
+                    <form>
+                        <field name="name" type="media" label="MOD_PINELLOCAROSELLO_FIELD_IMAGE1_LABEL"/>
+                    </form>
+                </field>
+            </fieldset> -->
+
+        
             <fieldset name="images">
                 <field
                     name="image1"
@@ -46,6 +56,13 @@
                     type="text"
                     label="MOD_PINELLOCAROSELLO_FIELD_LINK1_LABEL"
                     description="MOD_PINELLOCAROSELLO_FIELD_LINK_DESC"/>
+
+                <!-- <field
+					name="basicspacer1"
+					type="spacer"
+					hr="true"
+				/> -->
+
                 <field
                     name="image2"
                     type="media"
