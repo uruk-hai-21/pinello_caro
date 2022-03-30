@@ -114,15 +114,19 @@ if ($gumberCarousel == 'O') {
                             if($gumberCarousel == 'F'){
                                 echo '<a href="'.$gumber_img[$number].'" data-fancybox="gallery_'. $owl_id .'" '.
                                 (!is_null($caption)?' data-caption="'.$gumber_img[$titlenr].'">':'>')
-                                .'<img src="'.$gumber_img[$number].'" alt="'.$gumber_img[$titlenr].'"></a>';
+                                .'<img '. 
+                                ($lazyload ? 'class="owl-lazy" data-src="'.JURI::base().$gumber_img[$number].'" data-src-retina="'.JURI::base().$gumber_img[$number].'"' : 'src="'.$gumber_img[$number].'"')
+                                .' alt="'.$gumber_img[$titlenr].'"></a>';
                                     
                             } else {
-                                echo '<img src="'.$gumber_img[$number].'" alt="'.$gumber_img[$titlenr].'">'.
+                                echo '<img '. 
+                                ($lazyload ? 'class="owl-lazy" data-src="'.JURI::base().$gumber_img[$number].'" data-src-retina="'.JURI::base().$gumber_img[$number].'"' : 'src="'.$gumber_img[$number].'"')
+                                .' alt="'.$gumber_img[$titlenr].'">'.
                                 (!is_null($newlink)?'<a href="'.$newlink.'">':'').
                                     '<div class="'.$wrapperclass.'">
                                         <div class="'.$captionclass.'">
                                             <h5>'.$gumber_img[$titlenr].'</h5>
-                                            <div>' . $gumber_img[$captionnr].'</div>
+                                            <div>'.$gumber_img[$captionnr].'</div>
                                         </div>
                                     </div>'.
                                 (!is_null($newlink)?'</a>':'');
