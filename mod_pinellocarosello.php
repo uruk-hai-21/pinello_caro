@@ -3,7 +3,7 @@
 /**
  * @package  mod_pinellocarosello
  * Author:   Publygoo - publygoo.it
- * Version:  1.0.6
+ * Version:  1.0.8
  * Created:  January 2022
  * Updated:  June 2022
  * 
@@ -26,7 +26,7 @@ $navigationbool = 'false';
 $laziloadbool = 'false';
 $pagination = $params->get('pagination',1);
 $lazyload = $params->get('lazyLoad',0);
-$lazyloadeager = $params->get('lazyLoadEager');
+$lazyloadeager = $params->get('lazyLoadEager',0);
 $navigation = $params->get('navigation',0);
 $loop = $params->get('loop',0);
 $autoplay = $params->get('autoplay',0);
