@@ -37,10 +37,9 @@ if ($lazyloadbool) {
 $js_code .= '});';
 
 if ($enable_fancyboxbool) {
-    $js_code .= 'Fancybox.bind("#'.$owl_id.' .owl-item:not(.cloned) a[data-fancybox=\'gallery_'.$owl_id.'\']", {
+    $js_code .= 'Fancybox.bind("#'.$owl_id.' .owl-item a[data-fancybox=\'gallery_'.$owl_id.'\']", {
                     Toolbar: {
                         display: [
-                        { id: "counter", position: "left" },
                         "close"
                         ],
                     },
