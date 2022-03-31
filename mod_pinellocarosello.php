@@ -3,7 +3,7 @@
 /**
  * @package  mod_pinellocarosello
  * Author:   Publygoo - publygoo.it
- * Version:  1.0.8
+ * Version:  1.1.0
  * Created:  January 2022
  * Updated:  June 2022
  * 
@@ -50,19 +50,6 @@ if ($enable_fancybox){
     
 $jq = $params->get('add_jquery');
 $owl_id = "owl-" . $module->id;
-
-//variables are declared image1 to 10
-$gumber_img = array();
-for ($i = 1; $i < 11; $i++) {
-    $number= 'image'.$i;
-    $captionnr ='caption'.$i;
-    $titlenr = 'title'.$i;
-    $linknr = 'link'.$i;
-    $gumber_img[$number] = $params->get($number);
-    $gumber_img[$captionnr] = $params->get($captionnr);
-    $gumber_img[$titlenr] = $params->get($titlenr);
-    $gumber_img[$linknr]= $params->get($linknr);
-}
 
 // print_r($params);
 $pc_items = (object)json_encode($params->get('pc_item'));
