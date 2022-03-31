@@ -67,7 +67,7 @@
                     name="image2"
                     type="media"
                     label="MOD_PINELLOCAROSELLO_FIELD_IMAGE2_LABEL"
-                    description="MOD_PINELLOCAROSELLO_FIELD_IMAGE2_DESC"/>
+                    description="MOD_PINELLOCAROSELLO_FIELD_IMAGE_DESC"/>
                 <field
                     name="title2"
                     type="text"
@@ -249,11 +249,9 @@
                 type = "list"
                 label="MOD_PINELLOCAROSELLO_FIELD_TYPE_LABEL"
                 description="MOD_PINELLOCAROSELLO_FIELD_TYPE_DESC"
-                       default="O">
-                    <option value="O">MOD_PINELLOCAROSELLO_ONE</option>
+                       default="I">
                     <option value="I">MOD_PINELLOCAROSELLO_IMAGES</option>
-                    <option value="L">MOD_PINELLOCAROSELLO_LAZY</option>
-                    <option value="F">MOD_PINELLOCAROSELLO_FANCYBOX</option>
+                    <option value="T">MOD_PINELLOCAROSELLO_TEXT</option>
                 </field>
                 <field name="nrOfItems"
                 type = "integer"
@@ -333,7 +331,6 @@
                        default="0">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
-                    
                 </field>
                 <field name="add_jquery"
                 type = "radio"
@@ -345,6 +342,15 @@
                     <option value="0">JNO</option>
                     
                 </field>
+                <field name="enable_fancybox"
+                type = "radio"
+                class="btn-group"
+                label="MOD_PINELLOCAROSELLO_FIELD_FANCYBOX_ENABLE_LABEL"
+                description="MOD_PINELLOCAROSELLO_FIELD_FANCYBOX_ENABLE_DESC"
+                       default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
                 <field name="add_fancybox"
                 type = "radio"
                 class="btn-group"
@@ -353,7 +359,6 @@
                        default="0">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
-                    
                 </field>
             </fieldset>
 

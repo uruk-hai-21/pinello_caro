@@ -17,78 +17,42 @@ if ($fancybox == 1) {
 
 $document->addScript(JURI::base() . 'modules/mod_pinellocarosello/assets/owl.carousel.min.js');
 
-
-if ($gumberCarousel == 'O') {
-    $document->addScriptDeclaration('jQuery(document).ready(function () {
-            jQuery("#' . $owl_id . '").owlCarousel({
-                autoplay: '. $autoplay .',
-                loop: '. $loop .',
-                navigation: false, 
-                dotsSpeed: 400,
-                items: 1,
-                dots:' . $paginationbool . ', 
-                nav:' . $navigationbool . ',
-                //navText: [\'<i class="fa fa-chevron-left"></i>\',\'<i class="fa fa-chevron-right"></i>\'],
-                navText : [,],
-            });
-        });');
-} elseif ($gumberCarousel == 'I') {
-    $document->addScriptDeclaration('jQuery(document).ready(function () {
-            jQuery("#' . $owl_id . '").owlCarousel({
-                autoplay: '. $autoplay .',
-                loop: '. $loop .',
-                autoplaySpeed: ' . $gumberspeed . ', 
-                items : ' . $gumberitems . ',
-                dots:' . $paginationbool . ', 
-                nav:' . $navigationbool . ', 
-                itemsDesktop : [1199,3],
-                itemsDesktopSmall : [979,3]
-            });
-        });');
-} elseif ($gumberCarousel == 'L') {
-    $document->addScriptDeclaration('jQuery(document).ready(function () {
-            jQuery("#' . $owl_id . '").owlCarousel({
-                autoplay: '. $autoplay .',
-                items : ' . $gumberitems . ',
-                dots:' . $paginationbool . ', 
-                nav:' . $navigationbool . ',     
-                itemsDesktop : [1199,3],
-                itemsDesktopSmall : [979,3]
-            });
-        });');
-} elseif ($gumberCarousel == 'F') {
-    $document->addScriptDeclaration('jQuery(document).ready(function () {
-            jQuery("#' . $owl_id . '").owlCarousel({
-                autoplay: '. $autoplay .',
-                loop: '. $loop .',
-                lazyLoad: '. $lazyload .',
-                lazyLoadEager: '. $lazyloadeager.',
-                //loop: false,
-                //rewind: true,
-                mouseDrag: false,
-                touchDrag: true,
-                navigation: false, 
-                dotsSpeed: 400,
-                items: 1,
-                dots:' . $paginationbool . ', 
-                nav:' . $navigationbool . ',
-                //navText: [\'<i class="fa fa-chevron-left"></i>\',\'<i class="fa fa-chevron-right"></i>\'],
-                navText : [,],
-            });
-        });
-        Fancybox.bind("#'.$owl_id.' .owl-item:not(.cloned) a[data-fancybox=\'gallery_'.$owl_id.'\']", {
-            Toolbar: {
-                display: [
-                  { id: "counter", position: "left" },
-                  "close"
-                ],
-              },
-            Thumbs: {
-                autoStart: false
-            },
-          });
-        ');
+$js_code = 'jQuery(document).ready(function () {
+                jQuery("#' . $owl_id . '").owlCarousel({
+                    autoplay: '. $autoplay .',
+                    loop: '. $loop .',
+                    autoplaySpeed: ' . $gumberspeed . ', 
+                    navigation: false, 
+                    dotsSpeed: 400,
+                    items: '.$gumberitems.',
+                    dots: ' . $paginationbool . ', 
+                    nav: ' . $navigationbool . ',
+                    mouseDrag: false,
+                    //navText: [\'<i class="fa fa-chevron-left"></i>\',\'<i class="fa fa-chevron-right"></i>\'],
+                    navText : [,],';
+if ($lazyloadbool) {
+    $js_code .= 'lazyLoad: '. $lazyload .',
+                 lazyLoadEager: '. $lazyloadeager.',';
 }
+$js_code .= '});';
+
+if ($enable_fancyboxbool) {
+    $js_code .= 'Fancybox.bind("#'.$owl_id.' .owl-item:not(.cloned) a[data-fancybox=\'gallery_'.$owl_id.'\']", {
+                    Toolbar: {
+                        display: [
+                        { id: "counter", position: "left" },
+                        "close"
+                        ],
+                    },
+                    Thumbs: {
+                        autoStart: false
+                    },
+                });';
+}
+
+$js_code .= '});';
+
+$document->addScriptDeclaration($js_code);
 ?>
 
 <div id="<?php echo $owl_id; ?>" class="owl-carousel owl-theme">
@@ -107,33 +71,34 @@ if ($gumberCarousel == 'O') {
         $captionnr = 'caption' . $i;
         $titlenr = 'title' . $i;
         $linknr = 'link'.$i;
-        if ($gumber_img[$number]) {
-            // if ($caption) {
-                $newlink = $gumber_img[$linknr];
-                
-                    echo '<div class="item myrelative">';
-                            if($gumberCarousel == 'F'){
-                                echo '<a href="'.$gumber_img[$number].'" data-fancybox="gallery_'. $owl_id .'" '.
-                                (!is_null($caption)?' data-caption="'.$gumber_img[$titlenr].'">':'>')
-                                .'<img '. 
-                                ($lazyload ? 'class="owl-lazy" data-src="'.JURI::base().$gumber_img[$number].'" data-src-retina="'.JURI::base().$gumber_img[$number].'"' : 'src="'.$gumber_img[$number].'"')
-                                .' alt="'.$gumber_img[$titlenr].'"></a>';
-                                    
-                            } else {
-                                echo '<img '. 
-                                ($lazyload ? 'class="owl-lazy" data-src="'.JURI::base().$gumber_img[$number].'" data-src-retina="'.JURI::base().$gumber_img[$number].'"' : 'src="'.$gumber_img[$number].'"')
-                                .' alt="'.$gumber_img[$titlenr].'">'.
-                                (!is_null($newlink)?'<a href="'.$newlink.'">':'').
-                                    '<div class="'.$wrapperclass.'">
-                                        <div class="'.$captionclass.'">
-                                            <h5>'.$gumber_img[$titlenr].'</h5>
-                                            <div>'.$gumber_img[$captionnr].'</div>
-                                        </div>
-                                    </div>'.
-                                (!is_null($newlink)?'</a>':'');
-                            }
-                            echo '</div>';
-        }
+        $newlink = $gumber_img[$linknr];
+        
+        echo '<div class="item myrelative">';
+        //$gumberCarousel == 'I'
+            if ($enable_fancyboxbool) {
+                echo '<a href="'.$gumber_img[$number].'" data-fancybox="gallery_'. $owl_id .'" '.
+                (!is_null($caption)?' data-caption="'.$gumber_img[$titlenr].'">':'>');
+            } else if (!is_null($newlink)) {
+                echo '<a href="'.$newlink.'">';
+            }
+            
+            if ($gumber_img[$number]) {
+                echo '<img '. ($lazyload ? 'class="owl-lazy" data-src="'.JURI::base().$gumber_img[$number].'" data-src-retina="'.JURI::base().$gumber_img[$number].'"' : 'src="'.$gumber_img[$number].'"')
+                .' alt="'.$gumber_img[$titlenr].'">';
+            }
+                    
+            if ($enable_fancyboxbool || !is_null($newlink)) {
+                echo '</a>';
+            }
+
+            echo '<div class="'.$wrapperclass.'">
+                    <div class="'.$captionclass.'">
+                        <h5>'.$gumber_img[$titlenr].'</h5>
+                        <div>'.$gumber_img[$captionnr].'</div>
+                    </div>
+                  </div>';
+                    
+        echo '</div>';
     }
     ?>
 </div>

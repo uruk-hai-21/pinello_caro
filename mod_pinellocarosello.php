@@ -16,14 +16,15 @@ $bigcaption = $params->get('bigcaption');
 
 $document->addStyleSheet(JURI::base() . '/modules/mod_pinellocarosello/assets/owl.carousel.min.css');
 $document->addStyleSheet(JURI::base() . '/modules/mod_pinellocarosello/assets/owl.theme.default.min.css');
-$document->addStyleSheet(JURI::base() . '/modules/mod_pinellocarosello/assets/outsmartitowl.css');    
+$document->addStyleSheet(JURI::base() . '/modules/mod_pinellocarosello/assets/pinellocarosello.css');    
 
 $gumberCarousel = $params->get('carousel_type');
 $gumberspeed = $params->get('CarSpeed');
 $gumberitems = $params->get('nrOfItems');
 $paginationbool = 'false';
 $navigationbool = 'false';
-$laziloadbool = 'false';
+$lazyloadbool = 'false';
+$enable_fancyboxbool = 'false';
 $pagination = $params->get('pagination',1);
 $lazyload = $params->get('lazyLoad',0);
 $lazyloadeager = $params->get('lazyLoadEager',0);
@@ -31,7 +32,8 @@ $navigation = $params->get('navigation',0);
 $loop = $params->get('loop',0);
 $autoplay = $params->get('autoplay',0);
 $caption = $params->get('mycaption');
-$fancybox = $params->get('add_fancybox');
+$enable_fancybox = $params->get('enable_fancybox',0);
+$fancybox = $params->get('add_fancybox',0);
 
 if ($pagination){
     $paginationbool = 'true';
@@ -40,7 +42,10 @@ if ($navigation){
     $navigationbool = 'true';
 }
 if ($lazyload){
-    $laziloadbool = 'true';
+    $lazyloadbool = 'true';
+}
+if ($enable_fancybox){
+    $enable_fancyboxbool = 'true';
 }
     
 $jq = $params->get('add_jquery');
