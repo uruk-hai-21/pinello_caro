@@ -65,40 +65,53 @@ $document->addScriptDeclaration($js_code);
         $wrapperclass="carousel-wrapper-small";
         $captionclass="carousel-caption-small";
     }
-        
-    for ($i = 1; $i < 11; $i++) {
-        $number = 'image' . $i;
-        $captionnr = 'caption' . $i;
-        $titlenr = 'title' . $i;
-        $linknr = 'link'.$i;
-        $newlink = $gumber_img[$linknr];
-        
-        echo '<div class="item myrelative">';
-        //$gumberCarousel == 'I'
-            if ($enable_fancyboxbool) {
-                echo '<a href="'.$gumber_img[$number].'" data-fancybox="gallery_'. $owl_id .'" '.
-                (!is_null($caption)?' data-caption="'.$gumber_img[$titlenr].'">':'>');
-            } else if (!is_null($newlink)) {
-                echo '<a href="'.$newlink.'">';
-            }
-            
-            if ($gumber_img[$number]) {
-                echo '<img '. ($lazyload ? 'class="owl-lazy" data-src="'.JURI::base().$gumber_img[$number].'" data-src-retina="'.JURI::base().$gumber_img[$number].'"' : 'src="'.$gumber_img[$number].'"')
-                .' alt="'.$gumber_img[$titlenr].'">';
-            }
-                    
-            if ($enable_fancyboxbool || !is_null($newlink)) {
-                echo '</a>';
+
+    foreach ($pc_items as $key => $value) {
+        $json = json_decode($value, true);
+        foreach ($json as $key2 => $value2) {
+            foreach ($value2 as $key3 => $value3) {
+                switch ($key3) {
+                    case 'pc_image':
+                        $img = $value3;
+                        break;
+                    case 'pc_caption':
+                        $caption = $value3;
+                        break;
+                    case 'pc_title':
+                        $title = $value3;
+                        break;
+                    case 'pc_link':
+                        $link = $value3;
+                        break;
+                    default:
+                        break;
+                }
             }
 
-            echo '<div class="'.$wrapperclass.'">
-                    <div class="'.$captionclass.'">
-                        <h5>'.$gumber_img[$titlenr].'</h5>
-                        <div>'.$gumber_img[$captionnr].'</div>
-                    </div>
-                  </div>';
-                    
-        echo '</div>';
+            if ($img || $title != '' || $caption != '') {
+                echo '<div class="item myrelative">';
+                    if ($enable_fancyboxbool == true && $img) {
+                        echo '<a href="'.$img.'" data-fancybox="gallery_'. $owl_id .'" '.
+                        (!is_null($caption)?' data-caption="'.$title.'">':'>');
+                    } else if (!is_null($link)) {
+                        echo '<a href="'.$link.'">';
+                    }
+                    if ($img) {
+                        echo '<img '. ($lazyload ? 'class="owl-lazy" data-src="'.JURI::base().$img.'" data-src-retina="'.JURI::base().$img.'"' : 'src="'.$img.'"')
+                        .' alt="'.$title.'">';
+                    }
+                    echo '<div class="'.$wrapperclass . ($img ? ' img-txt' : ' no-img-txt').' ">
+                        <div class="'.$captionclass.'">
+                            <h5>'.$title.'</h5>
+                            <div>'.$caption.'</div>
+                        </div>
+                    </div>';
+                    if ($enable_fancyboxbool == true || !is_null($link)) {
+                        echo '</a>';
+                    }
+                echo '</div>';
+            }
+        }
     }
     ?>
 </div>

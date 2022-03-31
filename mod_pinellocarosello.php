@@ -18,13 +18,13 @@ $document->addStyleSheet(JURI::base() . '/modules/mod_pinellocarosello/assets/ow
 $document->addStyleSheet(JURI::base() . '/modules/mod_pinellocarosello/assets/owl.theme.default.min.css');
 $document->addStyleSheet(JURI::base() . '/modules/mod_pinellocarosello/assets/pinellocarosello.css');    
 
-$gumberCarousel = $params->get('carousel_type');
+// $gumberCarousel = $params->get('carousel_type');
 $gumberspeed = $params->get('CarSpeed');
-$gumberitems = $params->get('nrOfItems');
+$gumberitems = $params->get('nrOfItems',1);
 $paginationbool = 'false';
 $navigationbool = 'false';
 $lazyloadbool = 'false';
-$enable_fancyboxbool = 'false';
+$enable_fancyboxbool = false;
 $pagination = $params->get('pagination',1);
 $lazyload = $params->get('lazyLoad',0);
 $lazyloadeager = $params->get('lazyLoadEager',0);
@@ -45,7 +45,7 @@ if ($lazyload){
     $lazyloadbool = 'true';
 }
 if ($enable_fancybox){
-    $enable_fancyboxbool = 'true';
+    $enable_fancyboxbool = true;
 }
     
 $jq = $params->get('add_jquery');
@@ -63,4 +63,8 @@ for ($i = 1; $i < 11; $i++) {
     $gumber_img[$titlenr] = $params->get($titlenr);
     $gumber_img[$linknr]= $params->get($linknr);
 }
+
+// print_r($params);
+$pc_items = (object)json_encode($params->get('pc_item'));
+
 require JModuleHelper::getLayoutPath('mod_pinellocarosello', $params->get('layout', 'default'));
