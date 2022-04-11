@@ -92,7 +92,7 @@ $document->addScriptDeclaration($js_code);
                     if ($enable_fancyboxbool == true && $img) {
                         echo '<a href="'.$img.'" data-fancybox="gallery_'. $owl_id .'" '.
                         (!is_null($caption)?' data-caption="'.$title.'">':'>');
-                    } else if (!is_null($link)) {
+                    } else if (!is_null($link) && $link != '') {
                         echo '<a href="'.$link.'">';
                     }
                     if ($img) {
