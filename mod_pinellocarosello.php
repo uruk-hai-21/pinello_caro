@@ -14,9 +14,9 @@ defined('_JEXEC') or die;
 $document = JFactory::getDocument();
 $bigcaption = $params->get('bigcaption');
 
-$document->addStyleSheet(JURI::base() . '/modules/mod_pinellocarosello/assets/owl.carousel.min.css');
-$document->addStyleSheet(JURI::base() . '/modules/mod_pinellocarosello/assets/owl.theme.default.min.css');
-$document->addStyleSheet(JURI::base() . '/modules/mod_pinellocarosello/assets/pinellocarosello.css');    
+$document->addStyleSheet(JURI::base() . 'modules/mod_pinellocarosello/assets/owl.carousel.min.css');
+$document->addStyleSheet(JURI::base() . 'modules/mod_pinellocarosello/assets/owl.theme.default.min.css');
+$document->addStyleSheet(JURI::base() . 'modules/mod_pinellocarosello/assets/pinellocarosello.css');    
 
 // $gumberCarousel = $params->get('carousel_type');
 $gumberspeed = $params->get('CarSpeed');
