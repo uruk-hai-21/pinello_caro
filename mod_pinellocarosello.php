@@ -28,6 +28,8 @@ $enable_fancyboxbool = false;
 $pagination = $params->get('pagination',1);
 $lazyload = $params->get('lazyLoad',0);
 $lazyloadeager = $params->get('lazyLoadEager',0);
+$thumbnailsnav = $params->get('thumbnailsnav',0);
+$thumbs_item = $params->get('thumbs_item',0);
 $navigation = $params->get('navigation',0);
 $loop = $params->get('loop',0);
 $autoplay = $params->get('autoplay',0);
@@ -47,11 +49,14 @@ if ($lazyload){
 if ($enable_fancybox){
     $enable_fancyboxbool = true;
 }
-    
+
 $jq = $params->get('add_jquery');
 $owl_id = "owl-" . $module->id;
 
 // print_r($params);
 $pc_items = (object)json_encode($params->get('pc_item'));
+
+$responsive = $params->get('responsive',0);
+$responsive_settings = (object)json_encode($params->get('responsive_settings'));
 
 require JModuleHelper::getLayoutPath('mod_pinellocarosello', $params->get('layout', 'default'));

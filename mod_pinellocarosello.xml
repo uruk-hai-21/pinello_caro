@@ -39,167 +39,169 @@
 
             <fieldset name="general">
                 <!-- <field name="carousel_type"
-                type = "list"
-                label="MOD_PINELLOCAROSELLO_FIELD_TYPE_LABEL"
-                description="MOD_PINELLOCAROSELLO_FIELD_TYPE_DESC"
-                       default="I">
+                type = "list" label="MOD_PINELLOCAROSELLO_FIELD_TYPE_LABEL" description="MOD_PINELLOCAROSELLO_FIELD_TYPE_DESC" default="I">
                     <option value="I">MOD_PINELLOCAROSELLO_IMAGES</option>
                     <option value="T">MOD_PINELLOCAROSELLO_TEXT</option>
                 </field> -->
-                <field name="nrOfItems"
-                type = "integer"
-                label="MOD_PINELLOCAROSELLO_FIELD_ITEMS_LABEL"
-                description="MOD_PINELLOCAROSELLO_FIELD_ITEMS_DESC"
-                       default="1" first="1" last="10" step="1"/> 
+                
+                <field  name="nrOfItems"
+                        type = "integer"
+                        label="MOD_PINELLOCAROSELLO_FIELD_ITEMS_LABEL"
+                        description="MOD_PINELLOCAROSELLO_FIELD_ITEMS_DESC"
+                        default="1"
+                        first="1"
+                        last="10"
+                        step="1"/>
+
                 <field name="autoplay"
-                type = "radio"
-                class="btn-group"
-                label="MOD_PINELLOCAROSELLO_FIELD_AUTOPLAY_LABEL"
-                description="MOD_PINELLOCAROSELLO_FIELD_AUTOPLAY_DESC"
-                       default="1">
+                type = "radio" class="btn-group" label="MOD_PINELLOCAROSELLO_FIELD_AUTOPLAY_LABEL" description="MOD_PINELLOCAROSELLO_FIELD_AUTOPLAY_DESC" default="1">
                     <option value="1">JYES</option>
-                    <option value="0">JNO</option>     
-                </field>
-                <field name="loop"
-                type = "radio"
-                class="btn-group"
-                label="MOD_PINELLOCAROSELLO_FIELD_LOOP_LABEL"
-                description="MOD_PINELLOCAROSELLO_FIELD_LOOP_DESC"
-                       default="0">
-                    <option value="1">JYES</option>
-                    <option value="0">JNO</option>     
+                    <option value="0">JNO</option>
                 </field>
                 <field name="CarSpeed"
-                type = "integer"
-                label="MOD_PINELLOCAROSELLO_FIELD_SPEED_LABEL"
-                description="MOD_PINELLOCAROSELLO_FIELD_SPEED_DESC"
-                       default="3000" first="1000" last="10000" step="1000"/>
-                <field name="lazyLoad"
-                type = "radio"
-                class="btn-group"
-                label="MOD_PINELLOCAROSELLO_FIELD_LAZYLOAD_LABEL"
-                description="MOD_PINELLOCAROSELLO_FIELD_LAZYLOAD_DESC"
-                       default="0">
+                type = "integer" showon="autoplay:1" label="MOD_PINELLOCAROSELLO_FIELD_SPEED_LABEL" description="MOD_PINELLOCAROSELLO_FIELD_SPEED_DESC" default="3000" first="1000" last="10000" step="1000"/>
+                <field name="thumbnailsnav"
+                type = "radio" class="btn-group" label="MOD_PINELLOCAROSELLO_FIELD_THUMBSNAV_LABEL" description="MOD_PINELLOCAROSELLO_FIELD_THUMBSNAV_DESC" default="0">
                     <option value="1">JYES</option>
-                    <option value="0">JNO</option>     
+                    <option value="0">JNO</option>
+                </field>
+
+                <field  name="thumbs_item"
+                        showon="thumbnailsnav:1"
+                        type = "integer"
+                        label="MOD_PINELLOCAROSELLO_FIELD_ITEMS_THUMBS_LABEL"
+                        description="MOD_PINELLOCAROSELLO_FIELD_ITEMS_THUMBS_DESC"
+                        default="1"
+                        first="1"
+                        last="10"
+                        step="1"/>
+
+                <field name="loop"
+                type = "radio" class="btn-group" label="MOD_PINELLOCAROSELLO_FIELD_LOOP_LABEL" description="MOD_PINELLOCAROSELLO_FIELD_LOOP_DESC" default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="lazyLoad"
+                type = "radio" class="btn-group" label="MOD_PINELLOCAROSELLO_FIELD_LAZYLOAD_LABEL" description="MOD_PINELLOCAROSELLO_FIELD_LAZYLOAD_DESC" default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
                 </field>
                 <field name="lazyLoadEager"
-                type = "integer"
-                label="MOD_PINELLOCAROSELLO_FIELD_LAZYLOADEAGER_LABEL"
-                description="MOD_PINELLOCAROSELLO_FIELD_LAZYLOADEAGER_DESC"
-                       default="0" first="0" last="10" step="1"/>
+                type = "integer" showon="lazyLoad:1" label="MOD_PINELLOCAROSELLO_FIELD_LAZYLOADEAGER_LABEL" description="MOD_PINELLOCAROSELLO_FIELD_LAZYLOADEAGER_DESC" default="0" first="0" last="10" step="1"/>
+
                 <field name="pagination"
-                type = "radio"
-                class="btn-group"
-                label="MOD_PINELLOCAROSELLO_FIELD_PAGINATION_LABEL"
-                description="MOD_PINELLOCAROSELLO_FIELD_PAGINATION_DESC"
-                       default="1">
+                type = "radio" class="btn-group" label="MOD_PINELLOCAROSELLO_FIELD_PAGINATION_LABEL" description="MOD_PINELLOCAROSELLO_FIELD_PAGINATION_DESC" default="1">
                     <option value="1">JYES</option>
-                    <option value="0">JNO</option>     
+                    <option value="0">JNO</option>
                 </field>
                 <field name="navigation"
-                type = "radio"
-                class="btn-group"
-                label="MOD_PINELLOCAROSELLO_FIELD_NAVIGATION_LABEL"
-                description="MOD_PINELLOCAROSELLO_FIELD_NAVIGATION_DESC"
-                       default="0">
+                type = "radio" class="btn-group" label="MOD_PINELLOCAROSELLO_FIELD_NAVIGATION_LABEL" description="MOD_PINELLOCAROSELLO_FIELD_NAVIGATION_DESC" default="0">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
                 <field name="mycaption"
-                type = "radio"
-                class="btn-group"
-                label="MOD_PINELLOCAROSELLO_FIELD_ADDCAPTION_LABEL"
-                description="MOD_PINELLOCAROSELLO_FIELD_ADDCAPTION_DESC"
-                       default="1">
+                type = "radio" class="btn-group" label="MOD_PINELLOCAROSELLO_FIELD_ADDCAPTION_LABEL" description="MOD_PINELLOCAROSELLO_FIELD_ADDCAPTION_DESC" default="1">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
-                    
                 </field>
                 <field name="bigcaption"
-                type = "radio"
-                class="btn-group"
-                label="MOD_PINELLOCAROSELLO_FIELD_BIGCAPTION_LABEL"
-                description="MOD_PINELLOCAROSELLO_FIELD_BIGCAPTION_DESC"
-                       default="0">
+                type = "radio" class="btn-group" label="MOD_PINELLOCAROSELLO_FIELD_BIGCAPTION_LABEL" description="MOD_PINELLOCAROSELLO_FIELD_BIGCAPTION_DESC" default="0">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
                 <field name="add_jquery"
-                type = "radio"
-                class="btn-group"
-                label="MOD_PINELLOCAROSELLO_FIELD_JQUERY_LABEL"
-                description="MOD_PINELLOCAROSELLO_FIELD_JQUERY_DESC"
-                       default="1">
+                type = "radio" class="btn-group" label="MOD_PINELLOCAROSELLO_FIELD_JQUERY_LABEL" description="MOD_PINELLOCAROSELLO_FIELD_JQUERY_DESC" default="1">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
-                    
+
                 </field>
                 <field name="enable_fancybox"
-                type = "radio"
-                class="btn-group"
-                label="MOD_PINELLOCAROSELLO_FIELD_FANCYBOX_ENABLE_LABEL"
-                description="MOD_PINELLOCAROSELLO_FIELD_FANCYBOX_ENABLE_DESC"
-                       default="0">
+                type = "radio" class="btn-group" label="MOD_PINELLOCAROSELLO_FIELD_FANCYBOX_ENABLE_LABEL" description="MOD_PINELLOCAROSELLO_FIELD_FANCYBOX_ENABLE_DESC" default="0">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
                 <field name="add_fancybox"
-                type = "radio"
-                class="btn-group"
-                label="MOD_PINELLOCAROSELLO_FIELD_FANCYBOX_LABEL"
-                description="MOD_PINELLOCAROSELLO_FIELD_FANCYBOX_DESC"
-                       default="0">
+                type = "radio" class="btn-group" label="MOD_PINELLOCAROSELLO_FIELD_FANCYBOX_LABEL" description="MOD_PINELLOCAROSELLO_FIELD_FANCYBOX_DESC" default="0">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
             </fieldset>
 
+            <fieldset name="responsive_fieldset" label="MOD_PINELLOCAROSELLO_FIELD_RESPONSIVE">
+
+                <field name="responsive" type="list" label="MOD_PINELLOCAROSELLO_FIELD_ARTICLEGROUPING_LABEL" default="0" validate="options">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="responsive_settings" type="subform" label="COM_MODULES_IMAGES_FIELDSET_LABEL" multiple="true" showon="responsive:1" layout="joomla.form.field.subform.repeatable">
+                    <form>
+                        <field  name="breakpoint_resp"
+                                type="text"
+                                pattern="\d*"
+                                hint="breakpoint from Value px up" 
+                                label="MOD_PINELLOCAROSELLO_FIELD_RESPONSIVE_BREAKPOINT"/>
+
+                        <field  name="nrOfItems_resp"
+                                type = "integer"
+                                label="MOD_PINELLOCAROSELLO_FIELD_ITEMS_LABEL"
+                                description="MOD_PINELLOCAROSELLO_FIELD_ITEMS_DESC"
+                                default="1"
+                                first="1"
+                                last="10"
+                                step="1"/>
+
+                        <field  name="thumbs_item_resp"
+                                showon="thumbnailsnav:1"
+                                type = "integer"
+                                label="MOD_PINELLOCAROSELLO_FIELD_ITEMS_THUMBS_LABEL"
+                                description="MOD_PINELLOCAROSELLO_FIELD_ITEMS_THUMBS_DESC"
+                                default="1"
+                                first="1"
+                                last="10"
+                                step="1"/>
+
+                        <field  name="pagination_resp"
+                                type = "radio"
+                                class="btn-group"
+                                label="MOD_PINELLOCAROSELLO_FIELD_PAGINATION_LABEL"
+                                description="MOD_PINELLOCAROSELLO_FIELD_PAGINATION_DESC"
+                                default="1">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+
+                        <field  name="navigation_resp"
+                                type = "radio"
+                                class="btn-group"
+                                label="MOD_PINELLOCAROSELLO_FIELD_NAVIGATION_LABEL"
+                                description="MOD_PINELLOCAROSELLO_FIELD_NAVIGATION_DESC"
+                                default="0">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+                    </form>
+                </field>
+
+            </fieldset>
+
             <fieldset name="advanced">
-				<field
-					name="layout"
-					type="modulelayout"
-					label="JFIELD_ALT_LAYOUT_LABEL"
-					class="form-select"
-					validate="moduleLayout"
-				/>
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" class="form-select" validate="moduleLayout" />
 
-				<field
-					name="moduleclass_sfx"
-					type="textarea"
-					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
-					rows="3"
-					validate="CssIdentifier"
-				/>
+                <field name="moduleclass_sfx" type="textarea" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" rows="3" validate="CssIdentifier" />
 
-				<field
-					name="cache"
-					type="list"
-					label="COM_MODULES_FIELD_CACHING_LABEL"
-					default="1"
-					filter="integer"
-					validate="options"
-					>
-					<option value="1">JGLOBAL_USE_GLOBAL</option>
-					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
-				</field>
+                <field name="cache" type="list" label="COM_MODULES_FIELD_CACHING_LABEL" default="1" filter="integer" validate="options">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
 
-				<field
-					name="cache_time"
-					type="number"
-					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
-					default="900"
-					filter="integer"
-				/>
+                <field name="cache_time" type="number" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" default="900" filter="integer" />
 
-				<field
-					name="cachemode"
-					type="hidden"
-					default="static"
-					>
-					<option value="static"></option>
-				</field>
-			</fieldset>
+                <field name="cachemode" type="hidden" default="static">
+                    <option value="static"></option>
+                </field>
+            </fieldset>
         </fields>
     </config>
     <updateservers>
