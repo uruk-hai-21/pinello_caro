@@ -214,6 +214,9 @@ $document->addScriptDeclaration($js_code);
                     case 'pc_caption':
                         $caption = $value3;
                         break;
+                    case 'pc_alt':
+                        $alt = $value3;
+                        break;
                     case 'pc_title':
                         $title = $value3;
                         break;
@@ -235,7 +238,7 @@ $document->addScriptDeclaration($js_code);
                 }
                 if ($img) {
                     echo '<img ' . ($lazyload ? 'class="owl-lazy" data-src="' . JURI::base() . $img . '" data-src-retina="' . JURI::base() . $img . '"' : 'src="' . $img . '"')
-                        . ' alt="' . $title . '">';
+                        . ' alt="' . $alt . '">';
                 }
                 echo '<div class="' . $wrapperclass . ($img ? ' img-txt' : ' no-img-txt') . ' ">
                         <div class="' . $captionclass . '">
