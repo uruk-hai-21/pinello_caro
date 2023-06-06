@@ -30,6 +30,7 @@
                 <field name="pc_item" type="subform" label="COM_MODULES_IMAGES_FIELDSET_LABEL" multiple="true" layout="joomla.form.field.subform.repeatable-table">
                     <form>
                         <field name="pc_image" type="media" label="MOD_PINELLOCAROSELLO_FIELD_IMAGE_LABEL"/>
+                        <field name="pc_alt" type="text" label="MOD_PINELLOCAROSELLO_FIELD_ALT_LABEL"/>
                         <field name="pc_title" type="text" label="MOD_PINELLOCAROSELLO_FIELD_TITLE_LABEL"/>
                         <field name="pc_caption" type="text" label="MOD_PINELLOCAROSELLO_FIELD_CAPTION_LABEL"/>
                         <field name="pc_link" type="url" label="MOD_PINELLOCAROSELLO_FIELD_LINK_LABEL"/>
@@ -135,7 +136,7 @@
                     <option value="1">JYES</option>
                 </field>
 
-                <field name="responsive_settings" type="subform" label="COM_MODULES_IMAGES_FIELDSET_LABEL" multiple="true" showon="responsive:1" layout="joomla.form.field.subform.repeatable">
+                <field name="responsive_settings" type="subform" label="MOD_PINELLOCAROSELLO_FIELD_RESPONSIVE_BREAKPOINTS" multiple="true" showon="responsive:1" layout="joomla.form.field.subform.repeatable">
                     <form>
                         <field  name="breakpoint_resp"
                                 type="text"
