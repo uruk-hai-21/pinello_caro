@@ -26,7 +26,7 @@ $modId = 'mod-custom' . $module->id;
 
 $header_tag = json_decode($module->params)->header_tag;
 $header_class = json_decode($module->params)->header_class;
-// $moduleclass_sfx = json_decode($module->params)->moduleclass_sfx;
+$moduleclass_sfx = json_decode($module->params)->moduleclass_sfx;
 $module_tag = json_decode($module->params)->module_tag;
 ?>
 

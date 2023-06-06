@@ -59,6 +59,4 @@ $pc_items = (object)json_encode($params->get('pc_item'));
 $responsive = $params->get('responsive',0);
 $responsive_settings = (object)json_encode($params->get('responsive_settings'));
 
-$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx', ''), ENT_COMPAT, 'UTF-8');
-
 require JModuleHelper::getLayoutPath('mod_pinellocarosello', $params->get('layout', 'default'));
