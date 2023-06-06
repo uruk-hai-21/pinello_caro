@@ -4,7 +4,7 @@
  * @package     Joomla.Site
  * @subpackage  mod_pinellocarosello
  *
- * @copyright   Copyright (C) 2005 - 2022 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2023 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 defined('_JEXEC') or die;
@@ -12,14 +12,14 @@ if ($jq == 1) {
     JHtml::_('jquery.framework');
 }
 if ($fancybox == 1) {
-    $document->addScript(JURI::base() . 'modules/mod_pinellocarosello/assets/fancybox.umd.js');
-    $document->addStyleSheet(JURI::base() . 'modules/mod_pinellocarosello/assets/fancybox.css');
+    $document->addScript('modules/mod_pinellocarosello/assets/fancybox.umd.js');
+    $document->addStyleSheet('modules/mod_pinellocarosello/assets/fancybox.css');
 }
 
-$document->addScript(JURI::base() . 'modules/mod_pinellocarosello/assets/owl.carousel.min.js');
+$document->addScript('modules/mod_pinellocarosello/assets/owl.carousel.min.js');
 
 
-
+echo JVERSION;
 
 
 if ($responsive == 1) {
@@ -237,7 +237,7 @@ $document->addScriptDeclaration($js_code);
                     echo '<a href="' . $link . '">';
                 }
                 if ($img) {
-                    echo '<img ' . ($lazyload ? 'class="owl-lazy" data-src="' . JURI::base() . $img . '" data-src-retina="' . JURI::base() . $img . '"' : 'src="' . $img . '"')
+                    echo '<img ' . ($lazyload ? 'class="owl-lazy" data-src="' . $img . '" data-src-retina="' . $img . '"' : 'src="' . $img . '"')
                         . ' alt="' . $alt . '">';
                 }
                 echo '<div class="' . $wrapperclass . ($img ? ' img-txt' : ' no-img-txt') . ' ">
