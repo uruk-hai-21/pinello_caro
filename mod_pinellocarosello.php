@@ -3,7 +3,7 @@
 /**
  * @package  mod_pinellocarosello
  * Author:   Publygoo - publygoo.it
- * Version:  1.4.7
+ * Version:  1.4.8
  * Created:  January 2022
  * Updated:  June 2023
  * 
