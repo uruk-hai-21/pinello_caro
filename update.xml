@@ -7,7 +7,7 @@
         <type>module</type>
         <version>1.4.9</version>
         <infourl title="Developer informations">https://github.com/uruk-hai-21/pinello_caro</infourl>
-        <changelogurl>http://rawcdn.githack.com/uruk-hai-21/pinello_caro/main/changelog.xml</changelogurl>
+        <changelogurl>https://raw.githack.com/uruk-hai-21/pinello_caro/main/changelog.xml</changelogurl>
         <downloads>
             <downloadurl type="full" format="zip">https://github.com/uruk-hai-21/pinello_caro/archive/refs/tags/1.4.9.zip</downloadurl>
         </downloads>
