@@ -11,7 +11,7 @@
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>info@publygoo.it</authorEmail>
     <authorUrl>www.publygoo.it</authorUrl>
-    <version>1.4.0</version>
+    <version>1.4.7</version>
     <description>MOD_PINELLOCAROSELLO_XML_DESCRIPTION</description>
     <files>
         <filename module="mod_pinellocarosello">mod_pinellocarosello.php</filename>
@@ -306,7 +306,7 @@
         <server type="extension"
                 priority="1"
                 name="mod_pinellocarosello">
-                https://www.publygoo.it/updates/pinellocarosello.xml
+                https://raw.githubusercontent.com/uruk-hai-21/pinello_caro/main/update.xml
         </server>
     </updateservers>
 </extension>
