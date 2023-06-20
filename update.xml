@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <updates>
     <update>
-        <name>Pinello Carosello</name>
-        <description></description>
+        <name>mod_pinellocarosello</name>
+        <description>Pinello carosello molto bello</description>
         <element>mod_pinellocarosello</element>
         <type>module</type>
         <version>1.4.9</version>
@@ -16,6 +16,7 @@
         </tags>
         <maintainer>Publygoo</maintainer>
         <maintainerurl>https://www.publygoo.it</maintainerurl>
-        <targetplatform name="joomla" version="[34].[0123456789]" />
+        <targetplatform name="joomla" version=".*" />
+        <client>site</client>
     </update>
 </updates>
