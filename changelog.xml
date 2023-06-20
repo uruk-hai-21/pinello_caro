@@ -1,0 +1,24 @@
+<changelogs>
+	<changelog>
+        <element>mod_pinellocarosello</element>
+        <type>module</type>
+        <version>1.4.6</version>
+        <addition>
+        	<item>add changelog</item>
+        </addition>
+        <fix>
+        	<item>Bug fix and improvements</item>
+        </fix>
+	</changelog>
+	<changelog>
+        <element>mod_pinellocarosello</element>
+        <type>module</type>
+        <version>1.4.5</version>
+        <addition>
+        	<item>add compatibility joomla 3</item>
+        </addition>
+        <fix>
+        	<item>Bug fix and improvements</item>
+        </fix>
+	</changelog>
+</changelogs>
