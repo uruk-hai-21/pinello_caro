@@ -3,6 +3,17 @@
         <changelog>
                 <element>mod_pinellocarosello</element>
                 <type>module</type>
+                <version>1.4.9</version>
+                <addition>
+                        <item>add changelog</item>
+                </addition>
+                <fix>
+                        <item>Bug fix and improvements</item>
+                </fix>
+        </changelog>
+        <changelog>
+                <element>mod_pinellocarosello</element>
+                <type>module</type>
                 <version>1.4.8</version>
                 <addition>
                         <item>add changelog</item>
