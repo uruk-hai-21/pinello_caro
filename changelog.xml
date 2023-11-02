@@ -3,7 +3,7 @@
         <changelog>
                 <element>mod_pinellocarosello</element>
                 <type>module</type>
-                <version>1.5.0</version>
+                <version>1.5.1</version>
                 <addition>
                         <item>fix changelog</item>
                 </addition>
