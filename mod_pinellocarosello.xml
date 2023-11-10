@@ -11,7 +11,7 @@
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>info@publygoo.it</authorEmail>
     <authorUrl>www.publygoo.it</authorUrl>
-    <version>1.5.2</version>
+    <version>1.6.1</version>
     <description>MOD_PINELLOCAROSELLO_XML_DESCRIPTION</description>
     <files>
         <filename module="mod_pinellocarosello">mod_pinellocarosello.php</filename>
