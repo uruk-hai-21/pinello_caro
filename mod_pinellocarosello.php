@@ -10,7 +10,10 @@
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 defined('_JEXEC') or die;
-$document = JFactory::getDocument();
+use \Joomla\CMS\Factory;
+use Joomla\CMS\Helper\ModuleHelper;
+
+$document = Factory::getDocument();
 $bigcaption = $params->get('bigcaption');
 
 $document->addStyleSheet('modules/mod_pinellocarosello/assets/owl.carousel.min.css');
@@ -58,4 +61,4 @@ $pc_items = (object)json_encode($params->get('pc_item'));
 $responsive = $params->get('responsive',0);
 $responsive_settings = (object)json_encode($params->get('responsive_settings'));
 
-require JModuleHelper::getLayoutPath('mod_pinellocarosello', $params->get('layout', 'default'));
+require ModuleHelper::getLayoutPath('mod_pinellocarosello', $params->get('layout', 'default'));
