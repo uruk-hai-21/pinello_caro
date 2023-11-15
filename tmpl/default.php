@@ -251,7 +251,7 @@ $module_tag = json_decode($module->params)->module_tag;
                     }
                     if ($img) {
                         echo '<img ' . ($lazyload ? 'class="owl-lazy" data-src="' . $img . '" data-src-retina="' . $img . '"' : 'src="' . $img . '"')
-                            . ' alt="' . $alt . '">';
+                            . (($alt != "") ? ' alt = "' . $alt . '" ' : '') . '>';
                     }
                     echo '<div class="' . $wrapperclass . ($img ? ' img-txt' : ' no-img-txt') . ' ">
                         <div class="' . $captionclass . '">
