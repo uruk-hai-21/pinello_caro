@@ -250,8 +250,8 @@ $module_tag = json_decode($module->params)->module_tag;
                         echo '<a href="' . $link . '">';
                     }
                     if ($img) {
-                        echo '<img ' . ($lazyload ? 'class="owl-lazy" data-src="' . $img . '" data-src-retina="' . $img . '"' : 'src="' . $img . '"')
-                            . (($alt != "") ? ' alt = "' . $alt . '" ' : '') . '>';
+                        echo '<img ' . ($lazyload ? 'class="owl-lazy" data-src="' . JURI::base() . $img . '" data-src-retina="' . JURI::base() . $img . '"' : 'src="' . $img . '"')
+                            . ((isset($alt)) ? ' alt = "' . $alt . '" ' : '') . '>';
                     }
                     echo '<div class="' . $wrapperclass . ($img ? ' img-txt' : ' no-img-txt') . ' ">
                         <div class="' . $captionclass . '">
