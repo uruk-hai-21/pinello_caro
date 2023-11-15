@@ -4,66 +4,15 @@
                 <element>mod_pinellocarosello</element>
                 <type>module</type>
                 <version>1.6.2</version>
+                <change>
+                        <item>Compatiblity with Joomla 5 and Joomla 4.4</item>
+                        <item>Improvements and bugs fix</item>
+                </change>
                 <addition>
                         <item>joomla 5 compatibility</item>
                 </addition>
                 <fix>
-                        <item>joomla 5 compatibility</item>
-                </fix>
-        </changelog>
-        <changelog>
-                <element>mod_pinellocarosello</element>
-                <type>module</type>
-                <version>1.5.2</version>
-                <addition>
-                        <item>fix changelog</item>
-                </addition>
-                <fix>
-                        <item>Bug fix and improvements</item>
-                </fix>
-        </changelog>
-        <changelog>
-                <element>mod_pinellocarosello</element>
-                <type>module</type>
-                <version>1.4.9</version>
-                <addition>
-                        <item>add changelog</item>
-                </addition>
-                <fix>
-                        <item>Bug fix and improvements</item>
-                </fix>
-        </changelog>
-        <changelog>
-                <element>mod_pinellocarosello</element>
-                <type>module</type>
-                <version>1.4.8</version>
-                <addition>
-                        <item>add changelog</item>
-                </addition>
-                <fix>
-                        <item>Bug fix and improvements</item>
-                </fix>
-        </changelog>
-        <changelog>
-                <element>mod_pinellocarosello</element>
-                <type>module</type>
-                <version>1.4.7</version>
-                <addition>
-                        <item>add changelog</item>
-                </addition>
-                <fix>
-                        <item>Bug fix and improvements</item>
-                </fix>
-        </changelog>
-        <changelog>
-                <element>mod_pinellocarosello</element>
-                <type>module</type>
-                <version>1.4.6</version>
-                <addition>
-                        <item>add compatibility joomla 3</item>
-                </addition>
-                <fix>
-                        <item>Bug fix and improvements</item>
+                        <item>bugs fix</item>
                 </fix>
         </changelog>
 </changelogs>
